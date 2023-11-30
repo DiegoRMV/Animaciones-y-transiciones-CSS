@@ -1,0 +1,32 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	width: 90%;
+	border: 3px solid;
+	margin: 0 auto;
+}
+
+.element {
+	width: 200px;
+	height: 200px;
+	background: tomato;
+	margin: 20px;
+	clip-path: circle(80%);
+	/* transition-property: clip-path, transform, background-color;
+    transition-duration: 1s, 2s, 3s;
+    transition-timing-function: ease;
+    transition-delay: 1s; */
+	transition: clip-path 2s 0s cubic-bezier(0, 1.03, 1, 0.18),
+		transform 1.5s ease 2s, background-color 0s,
+		1s cubic-bezier(0, 1.03, 1, 0.18);
+}
+
+.container:hover .element {
+	clip-path: circle(20%);
+	transform: translate(100%);
+	background-color: #000;
+}
